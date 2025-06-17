@@ -166,8 +166,6 @@
 		"ICON_LIST",
 		"CallErrorHandler",
 		"MONEY",
-		"COMBATLOG_OBJECT_AFFILIATION_OUTSIDER",
-		"UISpecialFrames"
-	],
-	"Lua.type.weakUnionCheck": true
+		"COMBATLOG_OBJECT_AFFILIATION_OUTSIDER"
+	]
 }
