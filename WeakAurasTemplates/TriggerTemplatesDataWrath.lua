@@ -1313,6 +1313,10 @@ local delayedEnrichDatabase = false;
 local itemInfoReceived = CreateFrame("Frame")
 
 local enrichTries = 0;
+local delayedEnrichDatabase = false;
+local itemInfoReceived = CreateFrame("Frame")
+
+local enrichTries = 0;
 local function enrichDatabase()
   if (enrichTries > 3) then
     return;
