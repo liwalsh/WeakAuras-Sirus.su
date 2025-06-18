@@ -790,8 +790,8 @@ L["Matches (Pattern)"] = "Corresponde (Patrón)"
 L[ [=[Matches stage number of encounter journal.
 Intermissions are .5
 E.g. 1;2;1;2;2.5;3]=] ] = "Coincide con el número de etapa del diario de encuentros. Los intermedios son .5 Por ej. 1;2;1;2;2.5;3"
-L["Max Char "] = "Caracteres máx."
 L["Max Char"] = "Carácter máximo"
+L["Max Char "] = "Caracteres máx."
 L["Max Charges"] = "Cargas máx."
 L["Max Health"] = "Salud máx."
 L["Max Power"] = "Poder máx."

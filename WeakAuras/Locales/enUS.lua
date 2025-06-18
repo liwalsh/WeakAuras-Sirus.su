@@ -655,8 +655,8 @@ L["Hybrid"] = "Hybrid"
 L["Icon"] = "Icon"
 L["Icon Function"] = "Icon Function"
 L["Icon Function (fallback state)"] = "Icon Function (fallback state)"
-L["Id"] = "Id"
 L["ID"] = "ID"
+L["Id"] = "Id"
 L["If you require additional assistance, please open a ticket on GitHub or visit our Discord at https://discord.gg/weakauras!"] = "If you require additional assistance, please open a ticket on GitHub or visit our Discord at https://discord.gg/weakauras!"
 L["Ignore Dead"] = "Ignore Dead"
 L["Ignore Disconnected"] = "Ignore Disconnected"
@@ -806,8 +806,8 @@ Intermissions are .5
 E.g. 1;2;1;2;2.5;3]=] ] = [=[Matches stage number of encounter journal.
 Intermissions are .5
 E.g. 1;2;1;2;2.5;3]=]
-L["Max Char "] = "Max Char "
 L["Max Char"] = "Max Char"
+L["Max Char "] = "Max Char "
 L["Max Charges"] = "Max Charges"
 L["Max Health"] = "Max Health"
 L["Max Power"] = "Max Power"
