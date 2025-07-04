@@ -941,7 +941,7 @@ local function InitProcGlow(f)
   f.ProcStart = f:CreateTexture(nil, "ARTWORK")
   f.ProcStart:SetBlendMode("ADD")
   f.ProcStart:SetTexture(texturePath .. [[LibCustomGlow-1.0\UIActionBarFX]])
-  f.ProcStart:SetTexCoord(0.0827148248, 0.1649413686, 0.000976562, 0.165364635) -- First Frame
+  f.ProcStart:SetTexCoord(0.412598, 0.445312, 0.000977, 0.033691) -- First Frame
   f.ProcStart:SetAlpha(1)
   f.ProcStart:SetSize(150, 150)
   f.ProcStart:SetPoint("CENTER")
@@ -950,7 +950,7 @@ local function InitProcGlow(f)
   -- Loop-Flipbook
   f.ProcLoop = f:CreateTexture(nil, "ARTWORK")
   f.ProcLoop:SetTexture(texturePath .. [[LibCustomGlow-1.0\UIActionBarFX]])
-  f.ProcLoop:SetTexCoord(0.412598, 0.4451174, 0.000976562, 0.066080801666667) -- First Frame
+  f.ProcLoop:SetTexCoord(0.08252, 0.164551, 0.000977, 0.083008) -- First Frame
   f.ProcLoop:SetAlpha(1)
   f.ProcLoop:SetAllPoints()
   f.ProcLoop:Hide()
