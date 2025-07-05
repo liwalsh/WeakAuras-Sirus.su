@@ -6,6 +6,11 @@ local locale = GAME_LOCALE or GetLocale()
 -- Specializations, Reputation, Creature Types, Creature Families, and Time Formats
 if (locale == "enUS" or locale == "enGB") then
   L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
+  L["AddOn: APIDocumentation is %s."] = "AddOn: APIDocumentation is %s."
+  L["Please install it."] = "Please install it."
+  L["Please enable it in your AddOn list."] = "Please enable it in your AddOn list."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "AddOn: APIDocumentation is not loaded correctly."
+
   L["Affliction"] = "Affliction"
   L["Arcane"] = "Arcane"
   L["Arms"] = "Arms"
@@ -207,7 +212,12 @@ if (locale == "enUS" or locale == "enGB") then
 
 
 elseif (locale == "deDE") then
-   --[[Translation missing --]]
+  L["AddOn: APIDocumentation is %s."] = "AddOn: APIDocumentation ist %s."
+  L["Please install it."] = "Bitte installiere es."
+  L["Please enable it in your AddOn list."] = "Bitte aktiviere es in deiner AddOn-Liste."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "AddOn: APIDocumentation wurde nicht korrekt geladen."
+
+  --[[Translation missing --]]
   L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
   L["Affliction"] = "Gebrechen"
   L["Arcane"] = "Arkan"
@@ -420,6 +430,11 @@ elseif (locale == "deDE") then
 
 
 elseif (locale == "esES") then
+  L["AddOn: APIDocumentation is %s."] = "AddOn: APIDocumentation está %s."
+  L["Please install it."] = "Por favor, instálalo."
+  L["Please enable it in your AddOn list."] = "Por favor, actívalo en tu lista de AddOns."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "AddOn: APIDocumentation no se ha cargado correctamente."
+
   L["Requires syncing the specialization via LibGroupTalents."] = "Requiere sincronizar la especialización mediante LibGroupTalents."
   L["Affliction"] = "Aflicción"
   L["Arcane"] = "Arcano"
@@ -632,6 +647,11 @@ elseif (locale == "esES") then
 
 
 elseif (locale == "esMX") then
+  L["AddOn: APIDocumentation is %s."] = "AddOn: APIDocumentation está %s."
+  L["Please install it."] = "Por favor, instálalo."
+  L["Please enable it in your AddOn list."] = "Por favor, actívalo en tu lista de AddOns."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "AddOn: APIDocumentation no se ha cargado correctamente."
+
   L["Requires syncing the specialization via LibGroupTalents."] = "Requiere sincronizar la especialización mediante LibGroupTalents."
   L["Affliction"] = "Aflicción"
   L["Arcane"] = "Arcano"
@@ -845,7 +865,12 @@ elseif (locale == "esMX") then
 
 
 elseif (locale == "frFR") then
-   --[[Translation missing --]]
+  L["AddOn: APIDocumentation is %s."] = "Addon: APIDocumentation est %s."
+  L["Please install it."] = "Veuillez l'installer."
+  L["Please enable it in your AddOn list."] = "Veuillez l'activer dans votre liste d'Addons."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "Addon: APIDocumentation n'a pas été chargé correctement."
+
+  --[[Translation missing --]]
   L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
   L["Affliction"] = "Affliction"
   L["Arcane"] = "Arcane"
@@ -1058,7 +1083,14 @@ elseif (locale == "frFR") then
 
 
 elseif (locale == "itIT") then
-   --[[Translation missing --]]
+  --[[Translation missing --]]
+  L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
+  L["AddOn: APIDocumentation is %s."] = "AddOn: APIDocumentation is %s."
+  L["Please install it."] = "Please install it."
+  L["Please enable it in your AddOn list."] = "Please enable it in your AddOn list."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "AddOn: APIDocumentation is not loaded correctly."
+
+  --[[Translation missing --]]
   L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
   L["Affliction"] = "Affliction"
   L["Arcane"] = "Arcane"
@@ -1264,6 +1296,11 @@ elseif (locale == "itIT") then
 
 
 elseif (locale == "koKR") then
+  L["AddOn: APIDocumentation is %s."] = "애드온: APIDocumentation이(가) %s입니다."
+  L["Please install it."] = "설치해 주십시오."
+  L["Please enable it in your AddOn list."] = "애드온 목록에서 활성화해 주십시오."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "애드온: APIDocumentation이(가) 제대로 로드되지 않았습니다."
+
   L["Requires syncing the specialization via LibGroupTalents."] = "LibGroupTalents을 통해 전문화를 동기화해야 합니다."
   L["Affliction"] = "고통"
   L["Arcane"] = "비전"
@@ -1476,7 +1513,14 @@ elseif (locale == "koKR") then
 
 
 elseif (locale == "ptBR") then
-   --[[Translation missing --]]
+  --[[Translation missing --]]
+  L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
+  L["AddOn: APIDocumentation is %s."] = "AddOn: APIDocumentation is %s."
+  L["Please install it."] = "Please install it."
+  L["Please enable it in your AddOn list."] = "Please enable it in your AddOn list."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "AddOn: APIDocumentation is not loaded correctly."
+
+  --[[Translation missing --]]
   L["Requires syncing the specialization via LibGroupTalents."] = "Requires syncing the specialization via LibGroupTalents."
   L["Affliction"] = "Affliction"
   L["Arcane"] = "Arcane"
@@ -1680,6 +1724,11 @@ elseif (locale == "ptBR") then
 
 
 elseif (locale == "ruRU") then
+  L["AddOn: APIDocumentation is %s."] = "Аддон: APIDocumentation %s."
+  L["Please install it."] = "Пожалуйста, установите его."
+  L["Please enable it in your AddOn list."] = "Пожалуйста, включите его в вашем списке аддонов."
+  L["AddOn: APIDocumentation is not loaded correctly."] = "Аддон: APIDocumentation загружен некорректно."
+
   L["Requires syncing the specialization via LibGroupTalents."] = "Требуется синхронизация специализации через LibGroupTalents."
   L["Affliction"] = "Колдовство"
   L["Arcane"] = "Тайная магия"
@@ -1892,6 +1941,11 @@ elseif (locale == "ruRU") then
 
 
 elseif (locale == "zhCN") then
+  L["AddOn: APIDocumentation is %s."] = "插件：APIDocumentation %s。"
+  L["Please install it."] = "请安装它。"
+  L["Please enable it in your AddOn list."] = "请在你的插件列表中启用它。"
+  L["AddOn: APIDocumentation is not loaded correctly."] = "插件：APIDocumentation 未正确加载。"
+
   L["Requires syncing the specialization via LibGroupTalents."] = "需要通过LibGroupTalents同步专精。"
   L["Affliction"] = "痛苦"
   L["Arcane"] = "奥术"
@@ -2104,6 +2158,11 @@ elseif (locale == "zhCN") then
 
 
 elseif (locale == "zhTW") then
+  L["AddOn: APIDocumentation is %s."] = "插件：APIDocumentation %s。"
+  L["Please install it."] = "請安裝它。"
+  L["Please enable it in your AddOn list."] = "請在你的插件清單中啟用它。"
+  L["AddOn: APIDocumentation is not loaded correctly."] = "插件：APIDocumentation 未正確載入。"
+
   L["Requires syncing the specialization via LibGroupTalents."] = "需要透由LibGroupTalents同步專精。"
   L["Affliction"] = "痛苦"
   L["Arcane"] = "秘法"
