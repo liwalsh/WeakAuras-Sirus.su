@@ -37,6 +37,9 @@ end
 function WeakAuras.IsSirusVersion()
 	return true
 end
+function WeakAuras.IsSirusVersion()
+	return true
+end
 
 function WeakAuras.IsWrath()
   return flavor == "Wrath"
