@@ -31,6 +31,7 @@ Pools.lua
 # External code + initialization
 embeds.xml
 Init.lua
+Templates.lua
 locales.xml
 TimeUtil.lua
 ArchiveTypes\Repository.lua
