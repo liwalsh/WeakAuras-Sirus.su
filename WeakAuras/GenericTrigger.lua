@@ -963,28 +963,50 @@ function WeakAuras.ScanUnitEvents(event, unit, ...)
 	scannerFrame:Queue(Private.ScanUnitEvents, event, unit, ...)
 end
 
-function Private.ScanEventsInternal(event_list, event, arg1, arg2, ...)
-	for id, triggers in pairs(event_list) do
-		Private.StartProfileAura(id);
-		Private.ActivateAuraEnvironment(id);
-		local updateTriggerState = false;
-		for triggernum, data in pairs(triggers) do
-			local delay = GenericTrigger.GetDelay(data)
-			if delay == 0 then
-				local allStates = WeakAuras.GetTriggerStateForTrigger(id, triggernum);
-				if (RunTriggerFunc(allStates, data, id, triggernum, event, arg1, arg2, ...)) then
-					updateTriggerState = true
-				end
-			else
-				Private.RunTriggerFuncWithDelay(delay, id, triggernum, data, event, arg1, arg2, ...)
-			end
-		end
-		if (updateTriggerState) then
-			Private.UpdatedTriggerState(id);
-		end
-		Private.StopProfileAura(id);
-		Private.ActivateAuraEnvironment(nil);
-	end
+
+local function checkOnUpdateThrottle(data)
+  if data.onUpdateThrottle then
+    local now = GetTime()
+    if not data.lastOnUpdate or (now - data.lastOnUpdate) >= data.onUpdateThrottle then
+      data.lastOnUpdate = now
+      return true
+    end
+    return false
+  end
+  return true
+end
+
+function Private.ScanEventsInternal(event_list, event, arg1, arg2, ... )
+  for id, triggers in pairs(event_list) do
+    Private.StartProfileAura(id);
+    Private.ActivateAuraEnvironment(id);
+    local updateTriggerState = false;
+    for triggernum, data in pairs(triggers) do
+      if event == "FRAME_UPDATE" then
+        if checkOnUpdateThrottle(data) then
+          local allStates = WeakAuras.GetTriggerStateForTrigger(id, triggernum);
+          if (RunTriggerFunc(allStates, data, id, triggernum, event, arg1, arg2, ...)) then
+            updateTriggerState = true
+          end
+        end
+      else
+        local delay = GenericTrigger.GetDelay(data)
+        if delay == 0 then
+          local allStates = WeakAuras.GetTriggerStateForTrigger(id, triggernum);
+          if (RunTriggerFunc(allStates, data, id, triggernum, event, arg1, arg2, ...)) then
+            updateTriggerState = true
+          end
+        else
+          Private.RunTriggerFuncWithDelay(delay, id, triggernum, data, event, arg1, arg2, ...)
+        end
+      end
+    end
+    if (updateTriggerState) then
+      Private.UpdatedTriggerState(id);
+    end
+    Private.StopProfileAura(id);
+    Private.ActivateAuraEnvironment(nil);
+  end
 end
 
 function WeakAuras.ScanEventsInternal(event_list, event, arg1, arg2, ...)
@@ -1856,39 +1878,40 @@ function GenericTrigger.Add(data, region)
 					end
 				end
 
-				events[id] = events[id] or {};
-				events[id][triggernum] = {
-					trigger = trigger,
-					triggerFunc = triggerFunc,
-					untriggerFunc = untriggerFunc,
-					statesParameter = statesParameter,
-					event = trigger.event,
-					events = trigger_events,
-					ignorePartyUnitsInRaid = ignorePartyUnitsInRaid,
-					internal_events = internal_events,
-					loadInternalEventFunc = loadInternalEventFunc,
-					force_events = force_events,
-					unit_events = trigger_unit_events,
-					includePets = includePets,
-					inverse = trigger.use_inverse,
-					subevents = trigger_subevents,
-					durationFunc = durationFunc,
-					overlayFuncs = overlayFuncs,
-					nameFunc = nameFunc,
-					iconFunc = iconFunc,
-					textureFunc = textureFunc,
-					stacksFunc = stacksFunc,
-					loadFunc = loadFunc,
-					duration = duration,
-					automaticAutoHide = automaticAutoHide,
-					tsuConditionVariables = tsuConditionVariables,
-					prototype = prototype,
-					ignoreOptionsEventErrors = data.information.ignoreOptionsEventErrors,
-					counter = counter
-				};
-			end
-		end
-	end
+        events[id] = events[id] or {};
+        events[id][triggernum] = {
+          trigger = trigger,
+          triggerFunc = triggerFunc,
+          untriggerFunc = untriggerFunc,
+          statesParameter = statesParameter,
+          event = trigger.event,
+          events = trigger_events,
+          onUpdateThrottle = trigger.onUpdateThrottle,
+          ignorePartyUnitsInRaid = ignorePartyUnitsInRaid,
+          internal_events = internal_events,
+          loadInternalEventFunc = loadInternalEventFunc,
+          force_events = force_events,
+          unit_events = trigger_unit_events,
+          includePets = includePets,
+          inverse = trigger.use_inverse,
+          subevents = trigger_subevents,
+          durationFunc = durationFunc,
+          overlayFuncs = overlayFuncs,
+          nameFunc = nameFunc,
+          iconFunc = iconFunc,
+          textureFunc = textureFunc,
+          stacksFunc = stacksFunc,
+          loadFunc = loadFunc,
+          duration = duration,
+          automaticAutoHide = automaticAutoHide,
+          tsuConditionVariables = tsuConditionVariables,
+          prototype = prototype,
+          ignoreOptionsEventErrors = data.information.ignoreOptionsEventErrors,
+          counter = counter
+        };
+      end
+    end
+  end
 
 	if warnAboutCLEUEvents then
 		Private.AuraWarnings.UpdateWarning(data.uid, "spammy_event_warning", "error",
