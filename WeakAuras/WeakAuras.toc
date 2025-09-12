@@ -26,8 +26,7 @@
 
 ## X-Sirus-Update: https://github.com/fxpw/WeakAuras-Sirus.su/tree/master/WeakAuras
 
-Templates.lua
-Templates.xml
+
 Compatibility.lua
 Pools.lua
 
