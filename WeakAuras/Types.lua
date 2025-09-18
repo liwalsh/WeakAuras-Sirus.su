@@ -3703,7 +3703,6 @@ Private.reset_swing_spells = {
   [GetSpellInfo(845)] = true, -- Cleave
   [GetSpellInfo(2973)] = true, -- Raptor Strike
   [GetSpellInfo(6807)] = true, -- Maul
-  [GetSpellInfo(20549)] = true, -- War Stomp
   [GetSpellInfo(56815)] = true, -- Rune Strike
   [GetSpellInfo(5384)] = true, -- Feign Death
   [GetSpellInfo(2764)] = true, -- Throw
