@@ -5,9 +5,9 @@ local ceil, floor = math.ceil, math.floor
 -- local GetNumPartyMembers = GetNumPartyMembers
 -- local GetNumRaidMembers = GetNumRaidMembers
 
-function noop()
+-- function noop()
 
-end
+-- end
 
 -- function ipairs_reverse(table)
 -- 	local function Enumerator(table, index)
